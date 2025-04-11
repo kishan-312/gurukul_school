@@ -1,0 +1,156 @@
+/*------------------------------*\
+    STYLE.CSS
+\*------------------------------*/
+
+
+/*------------------------------*\
+    CUSTOM PROPERTIES
+\*------------------------------*/
+
+:root {
+
+    --color : ;
+
+    /**
+     *  Colors
+     */
+
+     /* Light Theme */
+     /* Dark Theme */
+    
+    /**
+     *  Typography
+     */
+
+
+    /**
+     *  Spacing
+     */
+
+    /**
+     *  Border Radius
+     */
+
+    /**
+     *  Box Shadow
+     */
+
+    /**
+     *  Transition
+     */
+
+    /**
+     *  Others
+     */
+
+
+
+}
+
+
+/*------------------------------*\
+    RESET
+\*------------------------------*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+
+    list-style: none;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+}
+
+img {
+
+    height: auto;
+
+}
+
+
+
+a,
+img,
+span,
+input,
+textarea,
+button {
+
+    display: block;
+
+}
+
+input,textarea {
+
+    width: 100%;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+button:focus , input:focus {
+
+    outline: none;
+
+}
+
+textarea {
+
+    resize: none;
+
+}
+
+button,textarea,input {
+
+    border: none;
+    background: none;
+    font: inherit;
+
+}
+
+
+/*------------------------------*\
+    BASE
+\*------------------------------*/
+
+:where(input,textarea)::placeholder {
+
+    color: inherit;
+
+}
+
+button:disabled {
+
+    pointer-events: none;
+
+}
+
+html {
+
+    font-size: 62.5%;
+    
+
+}
+
+
+
+
