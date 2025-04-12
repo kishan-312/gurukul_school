@@ -9,39 +9,178 @@
 
 :root {
 
-    --color : ;
 
     /**
      *  Colors
      */
 
-     /* Light Theme */
-     /* Dark Theme */
+     --dark-bluish : #1a3f63 ;
+     --dusty-sky-blue : #4a7e9d ;
+     --primary-red: #d0021b;            /* rgba(208, 2, 27, 1) */
+     --accent-orange: #f5a623;          /* rgba(245, 166, 35, 1) */
+     --highlight-yellow: #f8e71c;       /* rgba(248, 231, 28, 1) */
+     --brown-earth: #8b572a;            /* rgba(139, 87, 42, 1) */
+     --success-green: #7ed321;          /* rgba(126, 211, 33, 1) */
+     --dark-green: #417505;             /* rgba(65, 117, 5, 1) */
+     --vibrant-purple: #bd10e0;         /* rgba(189, 16, 224, 1) */
+     --electric-violet: #9013fe;        /* rgba(144, 19, 254, 1) */
+     --sky-blue: #4a90e2;               /* rgba(74, 144, 226, 1) */
+     --aqua-blue: #50e3c2;              /* rgba(80, 227, 194, 1) */
+     --soft-green: #b8e986;             /* rgba(184, 233, 134, 1) */
+     --pure-black: #000000;             /* rgba(0, 0, 0, 1) */
+     --dark-gray: #4a4a4a;              /* rgba(74, 74, 74, 1) */
+     --medium-gray: #9b9b9b;            /* rgba(155, 155, 155, 1) */
+     --pure-white: #ffffff;             /* rgba(255, 255, 255, 1) */
+
+
+
     
     /**
      *  Typography
      */
+
+     /* Font Family */
+
+     --font-primary : "Poppins", sans-serif ;
+     --font-secondary : "Open Sans", sans-serif ;
+    
+     /* Font Size */
+
+     --fs-base : 62.5% ;
+
+     --fs-display-large : 5.7rem ;
+     --fs-display-medium : 4.5rem ;
+     --fs-display-small : 3.6rem ;
+
+     --fs-headline-large : 3.2rem ;
+     --fs-headline-medium : 2.8rem ;
+     --fs-headline-small : 2.4rem ;
+
+     --fs-title-large : 2rem ;
+     --fs-title-medium : 1.6rem ;
+     --fs-title-small : 1.4rem ;
+
+     --fs-label-large : 1.4rem ;
+     --fs-label-medium : 1.2rem ;
+     --fs-label-small : 1.1rem ;
+
+     --fs-body-large : 1.6rem ;
+     --fs-body-medium : 1.4rem ;
+     --fs-body-small : 1.2rem ;
+
+     /* Font weight */
+
+     --fw-bold : bold ;
+     --fw-800 : 800 ;
+     --fw-700 : 700 ;
+     --fw-600 : 600 ;
+     --fw-medium : 500 ;
+     --fw-regular : 400 ;
+
+
+     /* Line Height */
+     --lh-base : 20px;
+
+     --lh-display-large : 64px;
+     --lh-display-medium : 52px;
+     --lh-display-small : 43px;
+     
+     --lh-headline-large : 40px;
+     --lh-headline-medium : 36px;
+     --lh-headline-small : 32px;
+     
+     --lh-title-large : 28px;
+     --lh-title-medium : 24px;
+     --lh-title-small : 20px;
+     
+     --lh-label-large : 20px;
+     --lh-label-medium : 16px;
+     --lh-label-small : 16px;
+     
+     --lh-body-large : 24px;
+     --lh-body-medium : 20px;
+     --lh-body-small : 16px;
+
+     /* Letter Spacing */
+    
+     --ls-n-025 : -0.25px;
+     --ls-p-010 : 0.10px;
+     --ls-p-015 : 0.15px;
+     --ls-p-025 : 0.25px;
+     --ls-p-040 : 0.40px;
+     --ls-p-050 : 0.50px;
+
 
 
     /**
      *  Spacing
      */
 
+    --spacing-base : 4px ;
+
+    --spacing-05 : calc(var(--spacing-base) * 0.5);
+    --spacing-1 : calc(var(--spacing-base) * 1);
+    --spacing-2 : calc(var(--spacing-base) * 2);
+    --spacing-3 : calc(var(--spacing-base) * 3);
+    --spacing-4 : calc(var(--spacing-base) * 4);
+    --spacing-5 : calc(var(--spacing-base) * 5);
+    --spacing-6 : calc(var(--spacing-base) * 6);
+    --spacing-7 : calc(var(--spacing-base) * 7);
+    --spacing-8 : calc(var(--spacing-base) * 8);
+    --spacing-9 : calc(var(--spacing-base) * 9);
+    --spacing-10 : calc(var(--spacing-base) * 10);
+    --spacing-11 : calc(var(--spacing-base) * 11);
+    --spacing-12 : calc(var(--spacing-base) * 12);
+    --spacing-13 : calc(var(--spacing-base) * 13);
+    --spacing-14 : calc(var(--spacing-base) * 14);
+    --spacing-15 : calc(var(--spacing-base) * 15);
+    --spacing-16 : calc(var(--spacing-base) * 16);
+    --spacing-17 : calc(var(--spacing-base) * 17);
+    --spacing-18 : calc(var(--spacing-base) * 18);
+    --spacing-19 : calc(var(--spacing-base) * 19);
+    --spacing-20 : calc(var(--spacing-base) * 20);
+    
+
     /**
      *  Border Radius
      */
+
+     --radius-extra-small : 4px;
+     --radius-small : 8px;
+     --radius-medium : 12px;
+     --radius-large : 16px;
+     --radius-extra-large : 28px;
+     --radius-full : 500px;
+     --radius-extra-full : 1000px;
+     --radius-circle : 50%;
+
 
     /**
      *  Box Shadow
      */
 
+    
+     --shadow-1 : 0px 1px 3px 1px #00000026 , 0px 1px 2px 0px #0000004d ;
+     --shadow-2 : 0px 2px 6px 2px #00000026 , 0px 1px 2px 0px #0000004d ;
+
+
     /**
      *  Transition
      */
 
+     --ts-duration-short : 200ms;
+     --ts-duration-medium : 400ms;
+     --ts-duration-large : 500ms;
+ 
+     --ts-easing-linear : cubic-bezier(0,0,1,1);
+     --ts-easing-emphasized : cubic-bezier(0.5,0,0,1);
+
+
     /**
      *  Others
      */
+
+    --top-bar-height : 80px;
 
 
 
@@ -146,10 +285,221 @@ button:disabled {
 
 html {
 
-    font-size: 62.5%;
-    
+    font-family: var(--font-secondary);
+    font-size: var(--fs-base);
+    scroll-behavior: smooth;
+
 
 }
+
+body {
+
+    font-size: var(--fs-body-large);
+    line-height: var(--lh-base);
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+
+
+}
+
+::selection {
+
+    background-color: var(--dusty-sky-blue);
+    color: var(--pure-white);
+
+}
+
+::-webkit-scrollbar {
+
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background-color: var(--pure-white);
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background-color: var(--medium-gray);
+    border-radius: var(--radius-extra-small);
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background-color: var(--dark-gray);
+
+}
+
+
+/*------------------------------*\
+    TYPOGRAPHY
+\*------------------------------*/
+
+.text-display-large {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-display-large);
+    line-height: var(--lh-display-large);
+    letter-spacing: var(--ls-n-025);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-display-medium {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-display-medium);
+    line-height: var(--lh-display-medium);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-display-small {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-display-small);
+    line-height: var(--lh-display-small);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-headline-large {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-headline-large);
+    line-height: var(--lh-headline-large);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-headline-medium {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-headline-medium);
+    line-height: var(--lh-headline-medium);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-headline-small {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-headline-small);
+    line-height: var(--lh-headline-small);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-title-large {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-title-large);
+    line-height: var(--lh-title-large);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-title-medium {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-title-medium);
+    line-height: var(--lh-title-medium);
+    letter-spacing: var(--ls-p-015);
+    font-weight: var(--fw-medium);
+
+}
+
+.text-title-small {
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-title-small);
+    line-height: var(--lh-title-small);
+    letter-spacing: var(--ls-p-010);
+    font-weight: var(--fw-medium);
+
+}
+
+.text-label-large {
+
+    font-size: var(--fs-label-large);
+    line-height: var(--lh-label-large);
+    letter-spacing: var(--ls-p-010);
+    font-weight: var(--fw-medium);
+
+}
+
+.text-label-medium {
+
+    font-size: var(--fs-label-medium);
+    line-height: var(--lh-label-medium);
+    letter-spacing: var(--ls-p-050);
+    font-weight: var(--fw-medium);
+
+}
+
+.text-label-small {
+
+    font-size: var(--fs-label-small);
+    line-height: var(--lh-label-small);
+    letter-spacing: var(--ls-p-050);
+    font-weight: var(--fw-medium);
+
+}
+
+.text-body-large {
+
+    font-size: var(--fs-body-large);
+    line-height: var(--lh-body-large);
+    letter-spacing: var(--ls-p-050);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-body-medium {
+
+    font-size: var(--fs-body-medium);
+    line-height: var(--lh-body-medium);
+    letter-spacing: var(--ls-p-025);
+    font-weight: var(--fw-regular);
+
+}
+
+.text-body-small {
+
+    font-size: var(--fs-body-small);
+    line-height: var(--lh-body-small);
+    letter-spacing: var(--ls-p-040);
+    font-weight: var(--fw-regular);
+
+}
+
+
+
+
+/*------------------------------*\
+    REUSED STYLE
+\*------------------------------*/
+
+
+/*------------------------------*\
+    COMPONENTS
+\*------------------------------*/
+
+
+/*------------------------------*\
+    HEADER
+\*------------------------------*/
+
+
 
 
 
