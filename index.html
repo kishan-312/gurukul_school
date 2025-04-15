@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Page Title -->
-    <meta name="title" content="guruSchools - home" />
+    <meta name="title" content="Bharat-Futurist-Ai - home" />
 
     <!-- Page Description -->
     <meta
       name="description"
-      content="GuruSchools helps people to become job-ready and earn high income by providing quality personal coaching, which are customized for your needs & career goals."
+      content="Bharat Futurist AI is a visionary platform at the intersection of artificial intelligence and India’s digital future. Designed to empower individuals, startups, and organizations, it offers cutting-edge insights, tools, and solutions that embrace the evolving world of AI, machine learning, and automation."
     />
 
     <!-- Keywords - SEO -->
     <meta
       name="keywords"
-      content="GuruSchools, job-ready, high income, personal coaching, career development, career goals, online coaching, customized learning, job training, skill development, career coaching, quality coaching, professional growth"
+      content="Bharat Futurist AI, AI in India, artificial intelligence, machine learning, future technology, digital India, AI tools, tech innovation, Indian startups, automation, future-ready India, AI education, emerging tech, smart India, AI resources"
     />
 
     <!-- Author Information -->
@@ -54,8 +54,8 @@
 
     <link
       rel="icon"
-      href="./assets/favicons/android-chrome-192x192.png"
-      sizes="192x192"
+      href="./assets/favicons/android-chrome-512x512.png"
+      sizes="512x512"
       type="image/x-icon"
     />
 
@@ -84,21 +84,775 @@
       rel="stylesheet"
     />
 
-    <!-- Reuse css -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- custom css -->
     <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
     <div class="main-container">
-      <header>
-        <figure class="logo-container">
-          <img src="./assets/logos/logo_bfa.png" alt="" />
-        </figure>
-        <div class="list-container"></div>
-        <button class="btn-container"></button>
+      <header class="header" data-header>
+        <div class="header-container section container">
+          <figure class="logo-container img-holder card-banner">
+            <img
+              src="./assets/logos/logo_bfa.png"
+              class="img-cover"
+              alt="Bharat-Futurist-Ai"
+            />
+          </figure>
+          <ul class="list-container">
+            <!-- home -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <!-- about -->
+
+            <li class="dropdown" data-tab-btn="about">
+              <div class="nav-item">
+                <a class="nav-link" href="./components/about-us.html">
+                  <span>About Us</span>
+                </a>
+                <i class="fa-solid fa-chevron-down" data-chevron-down></i>
+              </div>
+
+              <div class="dropdown-data" data-tab-content="about">
+                <div
+                  class="container-1 dropdown-data-container container3 container4"
+                  data-group
+                >
+                  <ul class="item-container">
+                    <li class="dropdown-item active" data-item="overview">
+                      <a href="#">
+                        <span>Overview</span>
+                        <i class="fa-solid fa-chevron-right"></i
+                      ></a>
+                    </li>
+                    <li class="dropdown-item" data-item="industries">
+                      <a href="#">
+                        <span>Industries</span>
+                        <i class="fa-solid fa-chevron-right"></i
+                      ></a>
+                    </li>
+                    <li class="dropdown-item" data-item="services">
+                      <a href="#">
+                        <span>Services</span>
+                        <i class="fa-solid fa-chevron-right"></i
+                      ></a>
+                    </li>
+                    <!-- <li class="dropdown-item" data-item="products">
+                        <a href="#">
+                          <span>Products and Platforms</span>
+                          <i class="fa-solid fa-chevron-right"></i
+                        ></a>
+                      </li> -->
+                  </ul>
+                  <div class="item-container-datas">
+                    <div
+                      class="item-container-data active"
+                      data-item-content="overview"
+                    >
+                      <h3 class="text-headline-medium">
+                        Bharat Futurist AI is here to shape tomorrow with
+                        intelligence.
+                      </h3>
+                      <p class="text-title-medium">
+                        Pioneering the future of innovation, we harness the
+                        power of Artificial Intelligence to empower industries,
+                        uplift communities, and drive digital transformation
+                        across India and beyond.
+                      </p>
+                      <button class="btn2 btn-primary">
+                        Discover all solution
+                      </button>
+                    </div>
+                    <div
+                      class="item-container-data"
+                      data-item-content="industries"
+                    >
+                      <ul>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Agritech & Smart Farming</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Healthcare & Biotech</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Education & EdTech</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Financial Services & Fintech</a
+                          >
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Retail & E-commerce</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Media, Entertainment & Content AI
+                          </a>
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Cybersecurity & Risk Intelligence</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Transport & Smart Logistics
+                          </a>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Smart Cities & Infrastructure</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Telecom & 5G Services</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Space & Defense Tech</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Public Sector & Governance
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="item-container-data"
+                      data-item-content="services"
+                    >
+                      <ul>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >AI Strategy & Consulting</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Custom AI Solutions</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Natural Language Processing</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Predictive Analytics & Forecasting</a
+                          >
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Robotic Process Automation</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >AI-Powered Chatbots & Virtual Assistants</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Data Engineering & AI Infrastructure</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Computer Vision Solutions</a
+                          >
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="services-item">
+                          <a class="services-link" href="#">AI in IoT</a>
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Ethical AI & Governance</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >AI Training & Upskilling</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Digital Twin Development</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <div>
+                        products
+                      </div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- courses -->
+
+            <li class="dropdown" data-tab-btn="courses">
+              <div class="nav-item">
+                <a class="nav-link" href="./components/all-courses.html">
+                  <span>All Courses</span>
+                </a>
+                <i class="fa-solid fa-chevron-down" data-chevron-down></i>
+              </div>
+
+              <div class="dropdown-data" data-tab-content="courses">
+                <div
+                  class="container-1 dropdown-data-container container3 container4"
+                  data-group
+                >
+                  <ul class="item-container">
+                    <li class="dropdown-item active" data-item="overview2">
+                      <a href="#">
+                        <span>Overview2</span>
+                        <i class="fa-solid fa-chevron-right"></i
+                      ></a>
+                    </li>
+                    <li class="dropdown-item" data-item="industries2">
+                      <a href="#">
+                        <span>Industries2</span>
+                        <i class="fa-solid fa-chevron-right"></i
+                      ></a>
+                    </li>
+                    <li class="dropdown-item" data-item="services2">
+                      <a href="#">
+                        <span>Services2</span>
+                        <i class="fa-solid fa-chevron-right"></i
+                      ></a>
+                    </li>
+                    <!-- <li class="dropdown-item" data-item="products">
+                        <a href="#">
+                          <span>Products and Platforms</span>
+                          <i class="fa-solid fa-chevron-right"></i
+                        ></a>
+                      </li> -->
+                  </ul>
+                  <div class="item-container-datas">
+                    <div
+                      class="item-container-data active"
+                      data-item-content="overview2"
+                    >
+                      <h3 class="text-headline-medium">
+                        Bharat Futurist AI is here to shape tomorrow with
+                        intelligence.
+                      </h3>
+                      <p class="text-title-medium">
+                        Pioneering the future of innovation, we harness the
+                        power of Artificial Intelligence to empower industries,
+                        uplift communities, and drive digital transformation
+                        across India and beyond.
+                      </p>
+                      <button class="btn2 btn-primary">
+                        Discover all solution
+                      </button>
+                    </div>
+                    <div
+                      class="item-container-data"
+                      data-item-content="industries2"
+                    >
+                      <ul>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Agritech & Smart Farming</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Healthcare & Biotech</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Education & EdTech</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Financial Services & Fintech</a
+                          >
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Retail & E-commerce</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Media, Entertainment & Content AI
+                          </a>
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Cybersecurity & Risk Intelligence</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Transport & Smart Logistics
+                          </a>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Smart Cities & Infrastructure</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Telecom & 5G Services</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Space & Defense Tech</a
+                          >
+                        </li>
+                        <li class="industries-sector-item">
+                          <a class="industries-section-link" href="#"
+                            >Public Sector & Governance
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="item-container-data"
+                      data-item-content="services2"
+                    >
+                      <ul>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >AI Strategy & Consulting</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Custom AI Solutions</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Natural Language Processing</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Predictive Analytics & Forecasting</a
+                          >
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Robotic Process Automation</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >AI-Powered Chatbots & Virtual Assistants</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Data Engineering & AI Infrastructure</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Computer Vision Solutions</a
+                          >
+                        </li>
+                      </ul>
+                      <ul>
+                        <li class="services-item">
+                          <a class="services-link" href="#">AI in IoT</a>
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Ethical AI & Governance</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >AI Training & Upskilling</a
+                          >
+                        </li>
+                        <li class="services-item">
+                          <a class="services-link" href="#"
+                            >Digital Twin Development</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <div>
+                        products
+                      </div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- team -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="./components/instructors.html"
+                >Our Team</a
+              >
+            </li>
+
+            <!-- faq -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="./components/faq.html">FAQ</a>
+            </li>
+
+            <!-- contact -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="./components/contact.html">Contact</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="./components/become-a-trainer.html"
+                >Become a Trainer
+              </a>
+            </li> -->
+          </ul>
+
+          <ul class="btn-menu-bar-container">
+            <li>
+              <button class="btn btn-primary btn-container">
+                Book Free Consultation
+              </button>
+            </li>
+            <li>
+              <div class="menu-bar-container" data-menu-bar-container>
+                <button class="menu-toggle" data-menu-toggle-btn>
+                  <i data-bar-symbol class="fa-solid fa-bars"></i>
+                </button>
+                <div class="menu-bar" data-menu-bar>
+                  <ul>
+                    <li class="menu-bar-item text-title-large">
+                      <a href="#" class="menu-bar-item-btn">
+                        <span>Home</span>
+                      </a>
+                      <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    </li>
+
+                    <!-- about-us -->
+                    <li class="menu-bar-item text-title-large">
+                      <button
+                        class="menu-bar-item-btn"
+                        data-menu-bar-item-btn="about"
+                      >
+                        <span>About Us</span>
+                        <i
+                          class="fa-solid fa-chevron-down"
+                          data-chevron-down-2
+                        ></i>
+                      </button>
+                      <div
+                        class="menu-bar-item-content"
+                        data-menu-bar-item-content="about"
+                      >
+                        <ul>
+                          <li class="menu-bar-item-subcontent">
+                            <a href="#">Overview</a>
+                          </li>
+                          <li class="menu-bar-item-subcontent">
+                            <button>
+                              <span>Industries</span>
+                              <i
+                                class="fa-solid fa-plus"
+                                data-menu-bar-item-subcontent="industries"
+                              ></i>
+                            </button>
+                            <ul
+                              class="menu-bar-item-subcontent-container"
+                              data-menu-bar-item-subcontent-container="industries"
+                            >
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Agritech & Smart Farming</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Healthcare & Biotech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Education & EdTech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Financial Services & Fintech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Retail & E-commerce</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Media, Entertainment & Content AI
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Cybersecurity & Risk Intelligence
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Transport & Smart Logistics </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Smart Cities & Infrastructure </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Telecom & 5G Services </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Space & Defense Tech </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Public Sector & Governance </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="menu-bar-item-subcontent">
+                            <button>
+                              <span>Services</span>
+                              <i
+                                class="fa-solid fa-plus"
+                                data-menu-bar-item-subcontent="services"
+                              ></i>
+                            </button>
+                            <ul
+                              class="menu-bar-item-subcontent-container"
+                              data-menu-bar-item-subcontent-container="services"
+                            >
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Agritech & Smart Farming</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Healthcare & Biotech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Education & EdTech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Financial Services & Fintech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Retail & E-commerce</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Media, Entertainment & Content AI
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Cybersecurity & Risk Intelligence
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Transport & Smart Logistics </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Smart Cities & Infrastructure </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Telecom & 5G Services </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Space & Defense Tech </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Public Sector & Governance </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <!-- courses -->
+
+                    <li class="menu-bar-item text-title-large">
+                      <button
+                        class="menu-bar-item-btn"
+                        data-menu-bar-item-btn="courses"
+                      >
+                        <span>All Courses</span>
+                        <i
+                          class="fa-solid fa-chevron-down"
+                          data-chevron-down-2
+                        ></i>
+                      </button>
+                      <div
+                        class="menu-bar-item-content"
+                        data-menu-bar-item-content="courses"
+                      >
+                        <ul>
+                          <li class="menu-bar-item-subcontent">
+                            <a href="#">Overview</a>
+                          </li>
+                          <li class="menu-bar-item-subcontent">
+                            <button>
+                              <span>Industries</span>
+                              <i
+                                class="fa-solid fa-plus"
+                                data-menu-bar-item-subcontent="industries2"
+                              ></i>
+                            </button>
+                            <ul
+                              class="menu-bar-item-subcontent-container"
+                              data-menu-bar-item-subcontent-container="industries2"
+                            >
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Agritech & Smart Farming</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Healthcare & Biotech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Education & EdTech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Financial Services & Fintech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Retail & E-commerce</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Media, Entertainment & Content AI
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Cybersecurity & Risk Intelligence
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Transport & Smart Logistics </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Smart Cities & Infrastructure </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Telecom & 5G Services </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Space & Defense Tech </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Public Sector & Governance </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="menu-bar-item-subcontent">
+                            <button>
+                              <span>Services</span>
+                              <i
+                                class="fa-solid fa-plus"
+                                data-menu-bar-item-subcontent="services2"
+                              ></i>
+                            </button>
+                            <ul
+                              class="menu-bar-item-subcontent-container"
+                              data-menu-bar-item-subcontent-container="services2"
+                            >
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Agritech & Smart Farming</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Healthcare & Biotech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Education & EdTech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Financial Services & Fintech</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Retail & E-commerce</a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Media, Entertainment & Content AI
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#"
+                                  >Cybersecurity & Risk Intelligence
+                                </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Transport & Smart Logistics </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Smart Cities & Infrastructure </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Telecom & 5G Services </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Space & Defense Tech </a>
+                              </li>
+                              <li class="menu-bar-item-subcontent-item">
+                                <a href="#">Public Sector & Governance </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu-bar-item text-title-large">
+                      <a href="#" class="menu-bar-item-btn">
+                        <span>Our Team</span>
+                      </a>
+                    </li>
+                    <li class="menu-bar-item text-title-large">
+                      <a href="#" class="menu-bar-item-btn">
+                        <span>FAQ</span>
+                      </a>
+                    </li>
+                    <li class="menu-bar-item text-title-large">
+                      <a href="#" class="menu-bar-item-btn">
+                        <span>Contact</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </header>
     </div>
-
-    <script></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

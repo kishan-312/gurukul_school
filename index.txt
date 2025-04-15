@@ -1,2 +1,11 @@
 color palettes github : https://github.com/andrewfiorillo/sketch-palettes/tree/master/Palettes
 
+    <!-- <div class="main-container">
+      <header>
+        <figure class="logo-container">
+          <img src="./assets/logos/logo_bfa.png" alt="" />
+        </figure>
+        <div class="list-container"></div>
+        <button class="btn-container"></button>
+      </header>
+    </div> -->
