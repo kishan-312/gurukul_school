@@ -356,4 +356,14 @@ function sidenarcontentsubaccordion() {
 
 sidenarcontentsubaccordion()
 
+function footer() {
+
+    const getYearData = document.querySelector("[data-year]");
+    const getYear = new Date().getFullYear() ;
+    console.log(getYear);
+    getYearData.textContent = getYear;
+
+}
+
+footer()
 

@@ -15,6 +15,7 @@
      */
 
      --dark-bluish : #1a3f63 ;
+     --dark-bluish-variant : 	#4B7191 ;
      --dark-bluish-hover : #075eb4 ;
      --dusty-sky-blue : #4a7e9d ;
      --dusty-sky-blue-hover : #46b3f3 ;
@@ -35,6 +36,7 @@
      --medium-gray: #9b9b9b;            /* rgba(155, 155, 155, 1) */
      --pure-white: #ffffff;             /* rgba(255, 255, 255, 1) */
      --pure-white-variant: #f3ebeb;             /* rgba(255, 255, 255, 1) */
+     --pure-white-variant2: #f5f5f5;             /* rgba(255, 255, 255, 1) */
 
 
 
@@ -307,7 +309,7 @@ body {
     line-height: var(--lh-base);
     background-color: var(--pure-white);
     color: var(--dark-bluish);
-    height: 120vh;
+    /* height: 120vh; */
 
 }
 
@@ -514,9 +516,21 @@ body {
 
 }
 
+.container3-2 {
+
+    padding-bottom: var(--spacing-16);
+
+}
+
 .container4 {
 
     padding-top: var(--spacing-5);
+
+}
+
+.container4-2 {
+
+    padding-top: var(--spacing-10);
 
 }
 
@@ -549,6 +563,12 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: top center;
+
+}
+
+.fa {
+
+    font-size: var(--fs-display-small);
 
 }
 
