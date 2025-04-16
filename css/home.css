@@ -365,7 +365,7 @@ li a {
 
     .menu-bar .menu-bar-item .menu-bar-item-btn.active {
 
-        background-color: var(--pure-white-variant);
+        background-color: var(--dusty-sky-blue-bg);
         font-weight: var(--fw-600);
 
 
@@ -396,7 +396,8 @@ li a {
         height: 0;
         opacity: 0;
         transition: all var(--ts-duration-short) var(--ts-easing);
-        background-color: var(--pure-white-variant);
+        background-color: var(--dusty-sky-blue-bg);
+
 
     }
 
@@ -565,7 +566,7 @@ li a {
 
     .menu-bar .menu-bar-item .menu-bar-item-btn.active {
 
-        background-color: var(--pure-white-variant);
+        background-color: var(--dusty-sky-blue-bg);
         font-weight: var(--fw-600);
 
 
@@ -579,7 +580,7 @@ li a {
         height: 0;
         opacity: 0;
         transition: all var(--ts-duration-short) var(--ts-easing);
-        background-color: var(--pure-white-variant);
+        background-color: var(--dusty-sky-blue-bg);
 
     }
 
