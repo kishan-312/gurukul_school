@@ -279,6 +279,8 @@ li a {
 
 @media (max-width:576px) {
 
+
+
     .list-container {
 
         display: none;
@@ -313,6 +315,8 @@ li a {
 
         width: 30px;
         height: 30px;
+        font-size: var(--fs-headline-small);
+        color: var(--dark-bluish);
 
     }
 
@@ -354,6 +358,8 @@ li a {
         padding: var(--spacing-5) var(--spacing-1);
         border-bottom: 1px solid var(--medium-gray);  
         font-weight: var(--fw-500);  
+        color: var(--dark-bluish);
+
 
     }
 
@@ -416,6 +422,8 @@ li a {
         align-items: center;
         width: 100%;
         font-weight: var(--fw-400);  
+        color: var(--dark-bluish);
+
 
 
     }
@@ -423,6 +431,8 @@ li a {
     .menu-bar-item-content .menu-bar-item-subcontent > a {
 
         font-weight: var(--fw-400);
+        color: var(--dark-bluish);
+
 
     }
 
@@ -437,6 +447,8 @@ li a {
         opacity: 0;
         transform-origin: top;
         transform: scaleY(0);
+        color: var(--dark-bluish);
+
 
     }
 
@@ -456,6 +468,8 @@ li a {
 
         font-weight: var(--fw-300);
         font-size: var(--fs-body-medium);
+        color: var(--dark-bluish);
+
 
 
     }
@@ -501,6 +515,8 @@ li a {
 
         width: 30px;
         height: 30px;
+        font-size: var(--fs-headline-small);
+        color: var(--dark-bluish);
 
     }
 
@@ -542,6 +558,7 @@ li a {
         padding: var(--spacing-5) var(--spacing-1);
         border-bottom: 1px solid var(--medium-gray);   
         font-weight: var(--fw-500);  
+        color: var(--dark-bluish);
 
 
     }
@@ -588,6 +605,8 @@ li a {
         align-items: center;
         width: 100%;
         font-weight: var(--fw-400);  
+        color: var(--dark-bluish);
+
 
 
     }
@@ -595,6 +614,7 @@ li a {
     .menu-bar-item-content .menu-bar-item-subcontent > a {
 
         font-weight: var(--fw-400);
+        color: var(--dark-bluish);
 
     }
 
@@ -609,6 +629,8 @@ li a {
         opacity: 0;
         transform-origin: top;
         transform: scaleY(0);
+        color: var(--dark-bluish);
+
 
     }
 
@@ -627,6 +649,8 @@ li a {
 
         font-weight: var(--fw-300);
         font-size: var(--fs-body-medium);
+        color: var(--dark-bluish);
+
 
     }
 

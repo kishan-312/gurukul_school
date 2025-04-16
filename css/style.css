@@ -305,7 +305,7 @@ body {
     font-size: var(--fs-body-large);
     line-height: var(--lh-base);
     background-color: var(--pure-white);
-    color: var(--pure-black);
+    color: var(--dark-bluish);
     height: 120vh;
 
 }
