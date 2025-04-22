@@ -831,6 +831,20 @@ iframe {
 }
 
 
+.card-container , .card-container2 {
+
+    grid-template-columns: 1fr;
+
+}
+
+.card-padding {
+
+    padding-inline: var(--spacing-12);
+
+}
+
+
+
 }
 
 
@@ -1053,7 +1067,6 @@ iframe {
         flex-direction: column-reverse;
         gap: var(--spacing-10);
         
-
     }
 
     
@@ -1072,6 +1085,18 @@ iframe {
 
 }
 
+.card-container , .card-container2 {
+
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+
+.card-padding {
+
+    padding-inline: var(--spacing-14);
+
+}
 
 
 }

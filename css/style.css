@@ -724,7 +724,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transform: skewY(10deg) translateY(100%);
-    transition: all 0.4s ease;
+    transition: all var(--ts-duration-short) var(--ts-easing);
     padding: var(--spacing-2) var(--spacing-3) ;
     display: flex;
     justify-content: space-between;
@@ -792,4 +792,86 @@ body {
     font-weight: var(--fw-600);
 
 }
+
+.card-container2 .card2 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-8);
+    background-color: var(--pure-white);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-2);
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-12) var(--spacing-8) var(--spacing-3) ;
+    border-radius: var(--radius-medium);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.card2 h1 {
+
+    font-size: var(--fs-headline-small);
+    line-height: var(--lh-headline-medium);
+    width: 100%;
+
+}
+
+.card2 p {
+
+    line-height: var(--lh-body-large);
+    font-size: var(--fs-body-large);
+    font-weight: var(--fw-500);
+
+
+}
+
+.card2 .learn-more {
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    font-weight: var(--fw-600);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.card2 figure {
+
+    transition: all 0.5s ease-in-out;
+
+
+}
+
+.card2:hover  {
+
+    scale: 1.05;
+    height: auto;
+    padding:  var(--spacing-12) var(--spacing-10) var(--spacing-4)
+
+
+}
+
+.card2:hover h1 , .card2:hover p {
+
+    width: 100%;
+
+}
+
+.card2:hover .learn-more {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.card2:hover figure {
+
+    scale: 0.96;
+
+}
+
 
