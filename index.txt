@@ -9,3 +9,485 @@ color palettes github : https://github.com/andrewfiorillo/sketch-palettes/tree/m
         <button class="btn-container"></button>
       </header>
     </div> -->
+
+
+
+
+                        <a href="#">
+                          <span>Industries</span>
+                          <i class="fa-solid fa-chevron-right"></i
+                        ></a>
+                        <a href="#">
+                          <span>Services</span>
+                          <i class="fa-solid fa-chevron-right"></i
+                        ></a>
+                        <a href="#">
+                          <span>Products and Platforms</span>
+                          <i class="fa-solid fa-chevron-right"></i
+                        ></a>
+
+
+    $buttons.forEach(($button) => {
+
+
+        $button.addEventListener("mouseover", function() {
+
+
+
+        const $activeElement = document.querySelector(`[data-tab-content="${this.dataset.tabBtn}"]`);
+
+
+            $contents.forEach(($content) => {
+
+                $content?.classList.remove("active");
+
+            } )
+
+            $activeElement?.classList.add("active");
+
+            $iconChevronDown.forEach(($icon) => {
+
+                $iconChevronDown.forEach(($otherIcon) => {
+
+                    $otherIcon.classList.remove("active")
+
+                } )
+
+                $icon.classList.add("active");
+    
+            } )
+ 
+        } )
+
+        $button.addEventListener("mouseleave", function() {
+
+            
+            $contents.forEach(($content) => {
+
+                $content?.classList.remove("active");
+
+            } )
+
+            $iconChevronDown.forEach(($icon) => {
+
+                $icon.classList.remove("active");
+    
+            } )
+
+        })
+
+    } )
+
+
+//////////////////
+
+
+    $items.forEach(($item) => {
+
+        $item.addEventListener("mouseover" , function() {
+
+
+            const $activeContent = document.querySelector(`[data-item-content="${this.dataset.item}"]`);
+
+            $contents.forEach(($content) => {
+
+                $content.classList.remove("active");
+
+            } )
+
+            $activeContent.classList.add("active") ;
+            $item.classList.add("active");
+
+        } )
+
+        $item.addEventListener("mouseleave", function() {
+
+
+
+            $item.classList.remove("active");
+
+
+        } )
+
+    } )
+
+
+
+
+    /* .menu-bar-container .menu-bar {
+
+        position: fixed;
+        top: var(--top-bar-height);
+        bottom: 0;
+        right: -100%;
+        padding: var(--spacing-6);
+        background-color: var(--pure-white);
+        box-shadow: var(--shadow-1);
+        height: 100%;
+        width: 40%;
+        z-index: 1000000;
+        transition: all var(--ts-duration-short) var(--ts-easing);
+        opacity: 1;
+        visibility: visible;
+
+
+    }
+
+    .menu-bar-container .menu-bar.active {
+
+        
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+
+
+    } */
+
+
+/*     
+    .menu-bar-container .menu-bar {
+
+        position: fixed;
+        top: var(--top-bar-height);
+        bottom: 0;
+        right: -100%;
+        padding: var(--spacing-6);
+        background-color: var(--pure-white);
+        box-shadow: var(--shadow-1);
+        height: 100%;
+        width: 100%;
+        z-index: 1000000;
+        transition: all var(--ts-duration-short) var(--ts-easing);
+        visibility: hidden;
+        opacity: 0;
+
+    }
+
+    .menu-bar-container .menu-bar.active {
+
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+
+    } */
+
+
+// suggestions
+
+The HTML structure appears to be well-organized, but there are some areas where improvements could be made for clarity, accessibility, and optimization. Here's a breakdown of a few things to consider:
+
+1. <a> tags inside dropdown items
+Currently, the <a> tags inside the dropdown items don't have clear navigational roles, especially when you're using # for the href attribute. If these are placeholders for future links, consider adding aria-label for better accessibility.
+
+Recommendation:
+
+html
+Copy
+Edit
+<a class="nav-link" href="#" aria-label="Go to About Us section">About Us</a>
+2. Duplicated structure for dropdown content (about/courses)
+Both the "About" and "Courses" dropdowns contain identical structures (ul > li > a), which could potentially be refactored to a single reusable component if you're using a framework like React or Vue.js.
+
+Recommendation:
+
+If you’re using plain HTML, consider simplifying this code or using JavaScript to dynamically load different dropdown content based on the section being accessed.
+
+3. Missing closing tags for <i> tags
+In the dropdown items, you have <i class="fa-solid fa-chevron-right"></i> but no closing </i> for some items (e.g., Overview and Industries sections). This can lead to rendering issues.
+
+Recommendation:
+
+html
+Copy
+Edit
+<i class="fa-solid fa-chevron-right"></i>
+4. Consideration for Accessibility (ARIA roles)
+For users with screen readers, it’s good to use appropriate ARIA roles for interactive elements. For example, you could add role="button" to the dropdown items that function as buttons.
+
+Recommendation:
+
+html
+Copy
+Edit
+<li class="dropdown-item" role="button" data-item="overview">
+    <a href="#">Overview</a>
+</li>
+5. Unnecessary commented-out code
+There's some commented-out code (<li class="dropdown-item" data-item="products">). If this is not needed, it should be removed to keep the code clean.
+
+Recommendation: Remove any unnecessary commented-out code to improve readability and maintainability.
+
+6. CSS Class Names
+The CSS classes like container-1, container3, container4 don’t seem descriptive, and could lead to confusion or errors down the line. Try using more semantic class names that describe the purpose of the elements.
+
+Recommendation:
+
+css
+Copy
+Edit
+.dropdown-menu, .dropdown-container, .dropdown-item
+7. Dropdown behavior
+The dropdown seems to rely on just HTML to manage its state (open/close). This might not be ideal for accessibility and usability.
+
+Consider adding keyboard navigation (like tab and enter keys).
+
+Use JavaScript to handle the opening/closing of the dropdown.
+
+8. Avoid deep nesting of <ul> elements
+There’s deep nesting of <ul> elements, especially under the dropdown content (e.g., inside .item-container). While it's fine for structure, deep nesting can sometimes become confusing and difficult to maintain.
+
+Recommendation:
+
+If you need to keep the structure, try to flatten the nesting level by breaking out into smaller reusable components.
+
+9. Responsive Design
+Make sure to check how this structure behaves on smaller screens. For example, the dropdown items might need to be stacked vertically on mobile screens, or you may need a mobile-first approach for the dropdown functionality.
+
+10. Missing or misplaced JavaScript
+The data-tab-btn, data-tab-content, and other data attributes suggest dynamic behavior (like tabbing between different sections), but there seems to be no corresponding JavaScript for the interactivity.
+
+Recommendation:
+
+Implement JavaScript to handle the tab-switching logic.
+
+Here's an example of a more structured and accessible version of your dropdown section:
+
+html
+Copy
+Edit
+<ul class="list-container">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Home</a>
+  </li>
+  
+  <li class="dropdown" aria-labelledby="about-dropdown">
+    <button class="nav-item" aria-expanded="false" aria-controls="about-dropdown-menu">
+      About Us
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-menu" id="about-dropdown-menu" aria-labelledby="about-dropdown">
+      <ul class="dropdown-list">
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Industries</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="./components/instructors.html">Our Team</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./components/faq.html">FAQ</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./components/contact.html">Contact</a>
+  </li>
+</ul>
+By following these suggestions, you’ll improve both the structure and the accessibility of your navigation. Let me know if you need further adjustments!
+
+//// proper structure tips
+
+When building a proper website structure, several aspects need to be considered for usability, accessibility, SEO, and performance. Here's a comprehensive list of things to keep in mind:
+
+1. Semantic HTML Structure
+Use semantic HTML tags for better accessibility and SEO (e.g., <header>, <footer>, <main>, <article>, <section>, <nav>, <aside>, <h1>, <p>).
+
+Avoid using <div> and <span> excessively; use them only for styling purposes when no semantic tag fits.
+
+Proper use of headings (<h1> to <h6>) for document structure. Ensure a clear hierarchy for accessibility and SEO.
+
+2. Accessibility (A11Y)
+Use the alt attribute for images to describe their content for screen readers.
+
+Use ARIA (Accessible Rich Internet Applications) roles and attributes to ensure dynamic content is accessible.
+
+Implement keyboard navigation for interactive elements (e.g., links, buttons).
+
+Ensure color contrast is high enough for readability.
+
+Use aria-label, aria-labelledby, aria-describedby for additional accessibility.
+
+Add skip to content links to allow users to skip navigation.
+
+Make sure forms are accessible with label tags and appropriate input attributes like aria-required.
+
+3. SEO (Search Engine Optimization)
+Meta tags: Add essential meta tags like <meta name="description" content="..."> and <meta name="robots" content="index, follow">.
+
+Use descriptive and unique title tags for each page.
+
+Implement schema markup for rich snippets (e.g., organization, product, reviews).
+
+Ensure proper heading hierarchy (e.g., <h1> for main titles, <h2> for subsections, etc.).
+
+Optimize URL structure: Use short, descriptive URLs.
+
+Mobile-first design: Ensure the site is mobile responsive.
+
+4. Navigation and User Experience (UX)
+Clear and consistent navigation: Ensure menus are easy to find and use.
+
+Breadcrumbs: Help users understand their location within the website and navigate easily.
+
+Search functionality: Include an accessible search bar for users to find content quickly.
+
+Provide feedback on actions (e.g., button clicks, form submissions).
+
+Responsive design: Make sure the site looks and works well on all devices (use CSS media queries).
+
+Ensure fast loading times to improve user experience (optimize images, scripts, etc.).
+
+5. Performance Optimization
+Optimize images: Use proper image formats (.webp, .jpeg, .png), compress them, and use responsive image techniques (e.g., srcset).
+
+Lazy loading: Implement lazy loading for images and videos to speed up initial load times.
+
+Minify and bundle CSS, JavaScript, and HTML files to reduce the size of requests.
+
+Use a Content Delivery Network (CDN) for static assets.
+
+Reduce HTTP requests: Minimize the number of files that need to be loaded (e.g., combining multiple CSS or JS files).
+
+Browser caching: Enable caching for static resources.
+
+6. Security Considerations
+Use HTTPS for secure communication (SSL/TLS).
+
+Implement Content Security Policy (CSP) to prevent cross-site scripting (XSS) attacks.
+
+Ensure input validation on the client and server-side to avoid SQL injection, XSS, and other attacks.
+
+Regular updates: Keep all software and libraries (e.g., frameworks, plugins) up-to-date.
+
+Use HTTP headers like Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options for added protection.
+
+7. Content Structure and Hierarchy
+Ensure your content is logically structured with clear sections and sub-sections.
+
+Use paragraphs, bullet points, and tables to organize and present information clearly.
+
+Use multimedia (videos, images, infographics) to support content but not overwhelm users.
+
+Text formatting: Use bold, italics, and underline sparingly for emphasis.
+
+8. Forms and Input Elements
+Use proper labels for form inputs to make them accessible.
+
+Provide clear error messages for invalid form submissions and indicate which fields need to be corrected.
+
+Ensure form inputs are clear, concise, and easily navigable.
+
+Add placeholders for input fields to guide users.
+
+Implement validation both on the client and server sides to ensure correct data is submitted.
+
+9. Cross-Browser Compatibility
+Test your website on multiple browsers (Chrome, Firefox, Safari, Edge, etc.) to ensure it works consistently across different environments.
+
+Use CSS prefixes (e.g., -webkit- for Safari) for better cross-browser support.
+
+Utilize autoprefixer tools to add necessary prefixes to CSS for broader compatibility.
+
+10. Mobile-First Design
+Responsive layout using media queries to ensure your website looks good on all screen sizes (from mobile to desktop).
+
+Touch-friendly design: Ensure buttons and links are large enough for mobile users to interact with comfortably.
+
+Optimize for mobile performance by minimizing the use of heavy images or scripts.
+
+11. Multilingual and Localization
+Use proper HTML lang attribute for multilingual websites to improve SEO and accessibility.
+
+Implement language toggles for users to switch between languages (if applicable).
+
+12. Analytics and Tracking
+Implement Google Analytics or similar tracking tools to track user behavior and interactions.
+
+Ensure privacy by complying with GDPR and other privacy laws (use cookie banners or consent forms).
+
+13. Backup and Version Control
+Use version control systems (e.g., Git) for tracking changes in code.
+
+Ensure regular backups of website data and files to prevent data loss.
+
+14. Testing and Debugging
+Perform unit testing for JavaScript code and end-to-end testing for overall site functionality.
+
+Ensure that forms, links, buttons, and other interactive elements work correctly across devices and browsers.
+
+Use debugging tools like browser developer tools, Lighthouse, and automated testing suites to check performance, accessibility, and SEO.
+
+Key Takeaways:
+Structure your code semantically for better accessibility and SEO.
+
+Ensure accessibility for all users, including those using screen readers or navigating via keyboard.
+
+Optimize performance and security for a fast and safe browsing experience.
+
+Make sure your content is well-organized and easy to understand, with clear navigation and error handling.
+
+Always test your site across multiple devices and browsers to ensure a consistent experience.
+
+By keeping these considerations in mind, you can build a solid, user-friendly, and accessible website.
+
+
+/// footer
+
+
+
+
+let isFooterVisible = false;
+
+function navbarSticky() {
+    const header = document.querySelector("[data-header]");
+    window.addEventListener("scroll", () => {
+        if (!isFooterVisible) {
+            if (window.scrollY > 0) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    });
+}
+
+function intersectionObserver() {
+    const header = document.querySelector("[data-header]");
+    const footer = document.querySelector("[data-footer]");
+
+    if (!header || !footer) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+        isFooterVisible = entry.isIntersecting;
+        console.log(isFooterVisible);
+        
+        if (isFooterVisible) {
+            header.classList.remove("sticky");
+        }
+    });
+
+    observer.observe(footer);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    navbarSticky();
+    intersectionObserver();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,26 +1,52 @@
-function navbarSticky() {
+function headerSticky() {
 
-    const $header = document.querySelector("[data-header]");
+    let isFooterVisible = false ;
+    const header = document.querySelector("[data-header]");
+    const footer = document.querySelector("[data-footer]");
+
+    if (!header || !footer) return;
+
 
     window.addEventListener("scroll" , function() {
 
-        if(window.scrollY > 0) {
+        if(!isFooterVisible) {
 
-            $header.classList.add("sticky") ;
+            if(window.scrollY > 0) {
 
-        }
+                header.classList.add("sticky");
 
-        else {
+            }
 
-            $header.classList.remove("sticky") ;
+            else {
+
+                header.classList.remove("sticky");
+
+            }
 
         }
 
     } )
 
+    // const observer = new IntersectionObserver(([entry]) => {
+
+    //     isFooterVisible = entry.isIntersecting;
+
+    //     if(isFooterVisible) {
+
+    //         header.classList.remove("sticky");
+
+    //     }
+
+
+    // } )
+
+    // observer.observe(footer)
+
+
 }
 
-navbarSticky()
+
+headerSticky()
 
 
 function hoverTabs() {
@@ -366,4 +392,7 @@ function footer() {
 }
 
 footer()
+
+
+
 
