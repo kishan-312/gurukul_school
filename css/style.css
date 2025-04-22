@@ -846,32 +846,6 @@ body {
 
 }
 
-.card2:hover  {
 
-    scale: 1.05;
-    height: auto;
-    padding:  var(--spacing-12) var(--spacing-10) var(--spacing-4)
-
-
-}
-
-.card2:hover h1 , .card2:hover p {
-
-    width: 100%;
-
-}
-
-.card2:hover .learn-more {
-
-    opacity: 1;
-    visibility: visible;
-
-}
-
-.card2:hover figure {
-
-    scale: 0.96;
-
-}
 
 

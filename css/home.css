@@ -843,6 +843,19 @@ iframe {
 
 }
 
+.card2 .learn-more {
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    font-weight: var(--fw-600);
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+ 
+}
+
+
 
 
 }
@@ -1098,6 +1111,19 @@ iframe {
 
 }
 
+.card2 .learn-more {
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    font-weight: var(--fw-600);
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+
+
+}
+
 
 }
 
@@ -1313,7 +1339,33 @@ iframe {
 
     }
 
+    .card2:hover  {
 
+        scale: 1.05;
+        height: auto;
+        padding:  var(--spacing-12) var(--spacing-10) var(--spacing-4)
+    
+    
+    }
+    
+    .card2:hover h1 , .card2:hover p {
+    
+        width: 100%;
+    
+    }
+    
+    .card2:hover .learn-more {
+    
+        opacity: 1;
+        visibility: visible;
+    
+    }
+    
+    .card2:hover figure {
+    
+        scale: 0.96;
+    
+    }
 
 
 
