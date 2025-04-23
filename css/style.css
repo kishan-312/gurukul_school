@@ -848,10 +848,8 @@ body {
 
 .card2:hover  {
 
-    scale: 1.05;
+    transform: scale(1.08,1.06);
     height: auto;
-    padding:  var(--spacing-12) var(--spacing-10) var(--spacing-4)
-
 
 }
 

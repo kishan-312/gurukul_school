@@ -358,7 +358,7 @@ li a:hover {
     BLOG - SECTION
 \*------------------------------*/
 
-.blog-container, .services-container{
+.blog-container, .services-container,.feedback-container {
 
     width: 100%;
     height: auto;
@@ -368,6 +368,7 @@ li a:hover {
 
 }
 
+
 .heading-container {
 
     text-align: center;
@@ -375,7 +376,7 @@ li a:hover {
 
 }
 
-.heading-blog,.heading-services {
+.heading-blog,.heading-services, .heading-feedback {
 
     display: inline-block;
     font-size: var(--fs-display-small);
@@ -385,7 +386,7 @@ li a:hover {
 }
 
 
-.heading-blog::after , .heading-services::after {
+.heading-blog::after , .heading-services::after  {
 
     content: "";
     position: absolute;
@@ -397,19 +398,160 @@ li a:hover {
 
 }
 
-
+/* services */
 
 .card-container , .card-container2 {
 
     margin-top: var(--spacing-20);
+    margin-bottom: var(--spacing-10);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-10);
 
 }
 
+/* feedback container */
 
 
+
+.feedback-main-container {
+
+    display: grid;
+    grid-template-columns: 1.4fr 2fr;
+    gap: var(--spacing-10);
+    padding: var(--spacing-10) 0;
+
+}
+
+
+.feedback-main-container .feedback-left-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-10);
+    padding-inline: var(--spacing-2) 0 var(--spacing-8);
+
+}
+
+.heading-feedback::after {
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 175px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--dark-bluish), transparent);
+
+}
+
+.heading-feedback {
+
+    line-height: var(--lh-headline-large);
+    font-weight: 800;
+
+}
+
+.feedback-quotes {
+
+    display: grid;
+    gap: var(--spacing-8);
+
+}
+
+.feedback-quotes p {
+
+    line-height: var(--lh-title-large);
+    font-weight: var(--fw-600);
+    color: #6B7280;
+    font-size: var(--fs-title-medium);
+
+}
+
+.feedback-right-container {
+
+    padding-inline: var(--spacing-2);
+
+}
+
+.feedback-card-container {
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: var(--spacing-10);
+    
+
+}
+
+.card-feedback {
+
+    background-color: var(--pure-white);
+    padding: var(--spacing-8);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-2);
+    position: relative;
+    overflow: hidden;
+    z-index: 11;
+    border-radius: var(--radius-medium);
+    display: grid;
+    gap: var(--spacing-10);
+
+}
+
+.card-feedback .quotes-icon {
+
+    position: absolute;
+    top: -18px;
+    left: -26px;
+    right: 0;
+    bottom: 0;
+    width: 196px;
+    height: 140px;
+    z-index: -1;
+    opacity: 0.4;
+
+}
+
+.card-feedback p {
+
+    line-height: var(--lh-headline-small) ;
+    font-size: var(--fs-title-large);
+
+}
+
+.card-feedback-footer {
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+
+}
+
+.card-feedback-footer .client-img {
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--dark-bluish);
+
+}
+
+.feedback-details {
+
+    display: grid;
+    gap: var(--spacing-1);
+
+}
+
+.feedback-details span {
+
+    font-size: var(--fs-title-small);
+    font-weight: var(--fw-400);
+    color: #6B7280;
+
+}
 
 
 /*------------------------------*\
@@ -885,6 +1027,53 @@ iframe {
 }
 
 
+.feedback-main-container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-10);
+    padding: var(--spacing-10) 0;
+
+}
+
+
+.feedback-card-container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-10);
+    
+
+}
+
+.card-feedback.last {
+
+    display: grid;
+
+}
+
+.card-feedback p {
+
+    line-height: var(--lh-title-medium) ;
+    font-size: var(--fs-title-small);
+
+}
+
+.card-container2 .card2 {
+
+
+    gap: var(--spacing-6);
+
+
+}
+
+.card2 h1 {
+
+    font-size: var(--fs-headline-small);
+    line-height: var(--lh-headline-small);
+    width: 100%;
+
+}
 
 
 }
@@ -1178,6 +1367,54 @@ iframe {
 .card2:hover figure {
 
     scale: 1;
+
+}
+
+.feedback-main-container {
+
+    display: grid;
+    grid-template-columns: 1.4fr 2fr;
+    gap: var(--spacing-10);
+    padding: var(--spacing-10) 0;
+
+}
+
+
+.feedback-card-container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-10);
+    
+
+}
+
+.card-feedback.last {
+
+    display: none;
+
+}
+
+.card-feedback p {
+
+    line-height: var(--lh-title-large) ;
+    font-size: var(--fs-title-medium);
+
+}
+
+.card-container2 .card2 {
+
+
+    gap: var(--spacing-4);
+
+
+}
+
+.card2 h1 {
+
+    font-size: var(--fs-title-large);
+    line-height: var(--lh-title-large);
+    width: 100%;
 
 }
 
