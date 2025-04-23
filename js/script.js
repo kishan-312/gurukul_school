@@ -393,6 +393,98 @@ function footer() {
 
 footer()
 
+function sliderContainer() {
+
+    const container = document.getElementById('sliderContainer');
+    const slider = document.getElementById('slider');
+    const slideInterval = 3000;
+    let isDragging = false;
+    let startX, scrollLeft;
+    let sliderWidth = 260 + 24; // image width + gap
+    let currentSlide = 0;
+  
+    // Clone the first image and append it to the end for seamless looping
+    const firstSlide = slider.children[0].cloneNode(true);
+    slider.appendChild(firstSlide);
+  
+    // Auto scroll
+    let autoSlide = setInterval(() => {
+      currentSlide++;
+      if (currentSlide >= slider.children.length) {
+        currentSlide = 1; // Skip the cloned first image (which is now at the end)
+        slider.style.transition = 'none'; // Remove transition to jump seamlessly
+        slider.style.transform = `translateX(0)`;
+        setTimeout(() => {
+          slider.style.transition = 'transform 0.5s ease'; // Re-enable transition after jump
+        }, 50); // Small timeout to let the jump happen
+      } else {
+        slider.style.transform = `translateX(-${currentSlide * sliderWidth}px)`;
+      }
+    }, slideInterval);
+  
+    // Pause on hover
+    container.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    container.addEventListener('mouseleave', () => {
+      autoSlide = setInterval(() => {
+        currentSlide++;
+        if (currentSlide >= slider.children.length) {
+          currentSlide = 1;
+          slider.style.transition = 'none';
+          slider.style.transform = `translateX(0)`;
+          setTimeout(() => {
+            slider.style.transition = 'transform 0.5s ease';
+          }, 50);
+        } else {
+          slider.style.transform = `translateX(-${currentSlide * sliderWidth}px)`;
+        }
+      }, slideInterval);
+    });
+  
+    // Drag to scroll
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+  
+    container.addEventListener('mouseleave', () => {
+      isDragging = false;
+    });
+  
+    container.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+  
+    container.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.5; // scroll speed
+      container.scrollLeft = scrollLeft - walk;
+    });
+  
+    // Touch support
+    container.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+  
+    container.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      container.scrollLeft = scrollLeft - walk;
+    });
+  
+    container.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+        
+
+}
+
+sliderContainer()
 
 
 

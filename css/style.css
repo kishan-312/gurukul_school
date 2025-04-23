@@ -61,6 +61,7 @@
      /* Font Size */
 
      --fs-base : 62.5% ;
+     --fs-base-2 : 50% ;
 
      --fs-display-large : 5.7rem ;
      --fs-display-medium : 4.5rem ;
@@ -307,7 +308,6 @@ html {
     font-family: var(--font-secondary);
     font-size: var(--fs-base);
     scroll-behavior: smooth;
-
 
 }
 

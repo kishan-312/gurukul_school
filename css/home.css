@@ -312,7 +312,7 @@ li a:hover {
 .hero-main {
 
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 
 }
 
@@ -322,7 +322,7 @@ li a:hover {
     flex-direction: column;
     gap: var(--spacing-10);
     justify-content: center;
-    
+
 }
 
 .hero-left h2 {
@@ -342,7 +342,7 @@ li a:hover {
 
 .hero-right {
 
-    background : url("../assets/images/hero/object-1.png") no-repeat center /cover  ;
+    background: url("../assets/images/hero/object-1.png") no-repeat center /cover;
 
 }
 
@@ -354,11 +354,73 @@ li a:hover {
 
 }
 
+
+/*------------------------------*\
+    Slider Selection
+\*------------------------------*/
+
+.slider-container {
+
+    position: relative;
+    overflow-x: auto;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: var(--spacing-5);
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+
+}
+
+.slider-container:active {
+
+    cursor: grabbing;
+
+}
+
+.slider-container::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.slider-container {
+
+    scrollbar-width: none;
+
+}
+
+
+.slider {
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--spacing-6);
+    transition: all 0.5s ease;
+
+}
+
+.slider .slider-img {
+
+    width: 260px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+
+}
+
+
+
 /*------------------------------*\
     BLOG - SECTION
 \*------------------------------*/
 
-.blog-container, .services-container,.feedback-container {
+.blog-container,
+.services-container,
+.feedback-container {
 
     width: 100%;
     height: auto;
@@ -376,7 +438,9 @@ li a:hover {
 
 }
 
-.heading-blog,.heading-services, .heading-feedback {
+.heading-blog,
+.heading-services,
+.heading-feedback {
 
     display: inline-block;
     font-size: var(--fs-display-small);
@@ -386,7 +450,8 @@ li a:hover {
 }
 
 
-.heading-blog::after , .heading-services::after  {
+.heading-blog::after,
+.heading-services::after {
 
     content: "";
     position: absolute;
@@ -400,7 +465,8 @@ li a:hover {
 
 /* services */
 
-.card-container , .card-container2 {
+.card-container,
+.card-container2 {
 
     margin-top: var(--spacing-20);
     margin-bottom: var(--spacing-10);
@@ -451,6 +517,7 @@ li a:hover {
 
     line-height: var(--lh-headline-large);
     font-weight: 800;
+    font-size: var(--fs-display-medium);
 
 }
 
@@ -479,9 +546,9 @@ li a:hover {
 .feedback-card-container {
 
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-10);
-    
+
 
 }
 
@@ -516,7 +583,7 @@ li a:hover {
 
 .card-feedback p {
 
-    line-height: var(--lh-headline-small) ;
+    line-height: var(--lh-headline-small);
     font-size: var(--fs-title-large);
 
 }
@@ -930,10 +997,10 @@ iframe {
     .read-more-container .read-more {
 
         display: flex;
-    
+
     }
 
-    
+
     .card .card-read-more-hover {
 
         display: none;
@@ -942,8 +1009,8 @@ iframe {
 
     .hero-right {
 
-        background : unset ;
-    
+        background: unset;
+
     }
 
     .hero-main {
@@ -951,129 +1018,129 @@ iframe {
         display: flex;
         flex-direction: column-reverse;
         gap: var(--spacing-10);
-        
+
 
     }
 
-    
-.hero-left h2 {
 
-    color: var(--dark-bluish);
-    font-size: var(--fs-display-small);
-    line-height: var(--lh-display-medium);
+    .hero-left h2 {
 
-}
+        color: var(--dark-bluish);
+        font-size: var(--fs-display-small);
+        line-height: var(--lh-display-medium);
 
-.hero-right .hero-holder {
+    }
 
-    transform: rotateY(0deg);
-    width: 80%;
-    height: auto;
+    .hero-right .hero-holder {
 
-}
+        transform: rotateY(0deg);
+        width: 80%;
+        height: auto;
 
-
-.card-container , .card-container2 {
-
-    grid-template-columns: 1fr;
-
-}
-
-.card-padding {
-
-    padding-inline: var(--spacing-12);
-
-}
-
-.card2 .learn-more {
-
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-4);
-    font-weight: var(--fw-600);
-    transition: all 0.5s ease-in-out;
-    opacity: 1;
-    visibility: visible;
- 
-}
+    }
 
 
-.card2:hover  {
+    .card-container,
+    .card-container2 {
 
-    scale: 1;
-    height: auto;
-    padding:  var(--spacing-12) var(--spacing-8) var(--spacing-3)
+        grid-template-columns: 1fr;
 
+    }
 
-}
+    .card-padding {
 
-.card2:hover h1 , .card2:hover p {
+        padding-inline: var(--spacing-12);
 
-    width: 100%;
+    }
 
-}
+    .card2 .learn-more {
 
-.card2:hover .learn-more {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-4);
+        font-weight: var(--fw-600);
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+        visibility: visible;
 
-    opacity: 1;
-    visibility: visible;
-
-}
-
-.card2:hover figure {
-
-    scale: 1;
-
-}
+    }
 
 
-.feedback-main-container {
+    .card2:hover {
 
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-10);
-    padding: var(--spacing-10) 0;
+        scale: 1;
+        height: auto;
+        padding: var(--spacing-12) var(--spacing-8) var(--spacing-3)
+    }
 
-}
+    .card2:hover h1,
+    .card2:hover p {
 
+        width: 100%;
 
-.feedback-card-container {
+    }
 
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-10);
-    
+    .card2:hover .learn-more {
 
-}
+        opacity: 1;
+        visibility: visible;
 
-.card-feedback.last {
+    }
 
-    display: grid;
+    .card2:hover figure {
 
-}
+        scale: 1;
 
-.card-feedback p {
-
-    line-height: var(--lh-title-medium) ;
-    font-size: var(--fs-title-small);
-
-}
-
-.card-container2 .card2 {
+    }
 
 
-    gap: var(--spacing-6);
+    .feedback-main-container {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-10);
+        padding: var(--spacing-10) 0;
+
+    }
 
 
-}
+    .feedback-card-container {
 
-.card2 h1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-10);
 
-    font-size: var(--fs-headline-small);
-    line-height: var(--lh-headline-small);
-    width: 100%;
 
-}
+    }
+
+    .card-feedback.last {
+
+        display: grid;
+
+    }
+
+    .card-feedback p {
+
+        line-height: var(--lh-title-medium);
+        font-size: var(--fs-title-small);
+
+    }
+
+    .card-container2 .card2 {
+
+
+        gap: var(--spacing-6);
+
+
+    }
+
+    .card2 h1 {
+
+        font-size: var(--fs-headline-small);
+        line-height: var(--lh-headline-small);
+        width: 100%;
+
+    }
 
 
 }
@@ -1283,7 +1350,7 @@ iframe {
     .read-more-container .read-more {
 
         display: flex;
-    
+
     }
 
     .card .card-read-more-hover {
@@ -1297,132 +1364,141 @@ iframe {
         display: flex;
         flex-direction: column-reverse;
         gap: var(--spacing-10);
-        
+
     }
 
-    
-
-.hero-right {
-
-    background : unset ;
-
-}
-
-.hero-right .hero-holder {
-
-    transform: rotateY(0deg);
-    width: 60%;
-    height: auto;
-
-}
-
-.card-container , .card-container2 {
-
-    grid-template-columns: repeat(2,1fr);
-
-}
 
 
-.card-padding {
+    .hero-right {
 
-    padding-inline: var(--spacing-14);
+        background: unset;
 
-}
+    }
 
-.card2 .learn-more {
+    .hero-right .hero-holder {
 
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-4);
-    font-weight: var(--fw-600);
-    transition: all 0.5s ease-in-out;
-    opacity: 1;
-    visibility: visible;
+        transform: rotateY(0deg);
+        width: 60%;
+        height: auto;
 
+    }
 
-}
+    .card-container,
+    .card-container2 {
 
-.card2:hover  {
+        grid-template-columns: repeat(2, 1fr);
 
-    scale: 1;
-    height: auto;
-    padding:  var(--spacing-12) var(--spacing-8) var(--spacing-3)
+    }
 
 
-}
+    .card-padding {
 
-.card2:hover h1 , .card2:hover p {
+        padding-inline: var(--spacing-14);
 
-    width: 100%;
+    }
 
-}
+    .card2 .learn-more {
 
-.card2:hover .learn-more {
-
-    opacity: 1;
-    visibility: visible;
-
-}
-
-.card2:hover figure {
-
-    scale: 1;
-
-}
-
-.feedback-main-container {
-
-    display: grid;
-    grid-template-columns: 1.4fr 2fr;
-    gap: var(--spacing-10);
-    padding: var(--spacing-10) 0;
-
-}
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-4);
+        font-weight: var(--fw-600);
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+        visibility: visible;
 
 
-.feedback-card-container {
+    }
 
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-10);
-    
+    .card2:hover {
 
-}
+        scale: 1;
+        height: auto;
+        padding: var(--spacing-12) var(--spacing-8) var(--spacing-3)
+    }
 
-.card-feedback.last {
+    .card2:hover h1,
+    .card2:hover p {
 
-    display: none;
+        width: 100%;
 
-}
+    }
 
-.card-feedback p {
+    .card2:hover .learn-more {
 
-    line-height: var(--lh-title-large) ;
-    font-size: var(--fs-title-medium);
+        opacity: 1;
+        visibility: visible;
 
-}
+    }
 
-.card-container2 .card2 {
+    .card2:hover figure {
+
+        scale: 1;
+
+    }
+
+    .feedback-main-container {
+
+        display: grid;
+        grid-template-columns: 1.4fr 2fr;
+        gap: var(--spacing-10);
+        padding: var(--spacing-10) 0;
+
+    }
 
 
-    gap: var(--spacing-4);
+    .feedback-card-container {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-10);
 
 
-}
+    }
 
-.card2 h1 {
+    .card-feedback.last {
 
-    font-size: var(--fs-title-large);
-    line-height: var(--lh-title-large);
-    width: 100%;
+        display: none;
 
-}
+    }
+
+    .card-feedback p {
+
+        line-height: var(--lh-title-large);
+        font-size: var(--fs-title-medium);
+
+    }
+
+    .card-container2 .card2 {
+
+
+        gap: var(--spacing-4);
+
+
+    }
+
+    .card2 h1 {
+
+        font-size: var(--fs-title-large);
+        line-height: var(--lh-title-large);
+        width: 100%;
+
+    }
 
 
 
 }
 
 @media (min-width:993px) and (max-width:1200px) {
+
+
+    html {
+
+        font-family: var(--font-secondary);
+        font-size: var(--fs-base);
+        scroll-behavior: smooth;
+
+    }
 
     .list-container {
 
@@ -1625,7 +1701,7 @@ iframe {
     .read-more-container .read-more {
 
         display: flex;
-    
+
     }
 
     .card .card-read-more-hover {
