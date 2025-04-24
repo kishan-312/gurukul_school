@@ -1728,7 +1728,7 @@ iframe {
     .card-feedback p {
 
         line-height: var(--lh-title-large);
-        font-size: var(--fs-body-small);
+        font-size: var(--fs-label-small);
 
     }
 
