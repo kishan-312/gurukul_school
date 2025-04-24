@@ -1142,22 +1142,7 @@ iframe {
       }
 
       
-    .card-data .card-title {
 
-        line-height: var(--lh-title-small);
-        font-size: var(--fs-body-medium);
-    
-    
-    }
-    
-    .card-data .card-description {
-    
-        text-align: start;
-        line-height: var(--lh-body-medium);
-        font-size: var(--fs-label-medium);
-    
-    
-    }
 
 
 
@@ -1748,22 +1733,6 @@ iframe {
     
     }
 
-    .card-data .card-title {
-
-        line-height: var(--lh-title-small);
-        font-size: var(--fs-body-small);
-    
-    
-    }
-    
-    .card-data .card-description {
-    
-        text-align: start;
-        line-height: var(--lh-body-medium);
-        font-size: var(--fs-label-medium);
-    
-    
-    }
 
 
 }
