@@ -671,7 +671,7 @@ li a:hover {
 
     display: grid;
     grid-template-columns: 1.1fr 1fr 1fr 0.6fr;
-    gap: var(--spacing-9);
+    gap: var(--spacing-15);
 
 }
 
