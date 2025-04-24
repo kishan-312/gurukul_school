@@ -576,7 +576,7 @@ li a:hover {
 .card-feedback p {
 
     line-height: var(--lh-headline-small);
-    font-size: var(--fs-title-large);
+    font-size: var(--fs-body-large);
 
 }
 
