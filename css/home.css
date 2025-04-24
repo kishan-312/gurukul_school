@@ -682,6 +682,7 @@ li a:hover {
     text-align: start;
     line-height: var(--lh-body-large);
     color: var(--dark-bluish);
+    font-size: var(--fs-body-medium);
 
 }
 
@@ -716,6 +717,12 @@ iframe {
 
     display: grid;
     gap: var(--spacing-5);
+
+}
+
+.sitemap-data ul li a {
+
+    font-size: var(--fs-body-medium);
 
 }
 
