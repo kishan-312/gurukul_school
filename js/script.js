@@ -393,98 +393,143 @@ function footer() {
 
 footer()
 
-function sliderContainer() {
 
+
+//   function sliderContainer() {
+//     const container = document.getElementById('sliderContainer');
+//     const slider = document.getElementById('slider');
+//     const slideInterval = 3000;
+//     const slideGap = 24;
+//     const slideWidth = 260;
+//     const sliderWidth = slideWidth + slideGap ;
+  
+//     let currentSlide = 0 ;
+  
+//     const originalSlides = Array.from(slider.children) ;
+  
+//     // Clone once to get started
+//     originalSlides.forEach(slide => {
+//       const clone = slide.cloneNode(true);
+//       slider.appendChild(clone);
+//     });
+  
+//     let allSlides = Array.from(slider.children);
+  
+//     allSlides.forEach((slide, index) => {
+//       if (index < allSlides.length - 1) {
+//         slide.style.marginRight = `${slideGap}px`;
+//       }
+//     });
+  
+//     function moveToSlide(index) {
+//       slider.style.transition = 'transform 0.5s ease';
+//       slider.style.transform = `translateX(-${index * sliderWidth}px)`;
+//     }
+  
+//     function keepCloning() {
+//       const slides = Array.from(slider.children);
+//       const maxVisibleSlides = Math.ceil(container.offsetWidth / sliderWidth);
+      
+//       // Clone when nearing the end
+//       if (currentSlide + maxVisibleSlides >= slides.length) {
+//         originalSlides.forEach(slide => {
+//           const clone = slide.cloneNode(true);
+//           slider.appendChild(clone);
+//         });
+//       }
+//     }
+  
+//     let autoSlide = setInterval(() => {
+//       currentSlide++;
+//       moveToSlide(currentSlide);
+//       keepCloning();
+//     }, slideInterval);
+
+//     // 
+  
+//     container.addEventListener('mouseenter', () => clearInterval(autoSlide));
+//     container.addEventListener('mouseleave', () => {
+//       autoSlide = setInterval(() => {
+//         currentSlide++;
+//         moveToSlide(currentSlide);
+//         keepCloning();
+//       }, slideInterval);
+//     });
+//   }
+  
+//   sliderContainer();
+  
+  function sliderContainer() {
     const container = document.getElementById('sliderContainer');
     const slider = document.getElementById('slider');
     const slideInterval = 3000;
-    let isDragging = false;
-    let startX, scrollLeft;
-    let sliderWidth = 260 + 24; // image width + gap
+    const slideGap = 24;
+  
     let currentSlide = 0;
   
-    // Clone the first image and append it to the end for seamless looping
-    const firstSlide = slider.children[0].cloneNode(true);
-    slider.appendChild(firstSlide);
+    const originalSlides = Array.from(slider.children);
   
-    // Auto scroll
+    // Clone once to get started
+    originalSlides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      slider.appendChild(clone);
+    });
+  
+    let allSlides = Array.from(slider.children);
+  
+    // Add right margin
+    allSlides.forEach((slide, index) => {
+      if (index < allSlides.length - 1) {
+        slide.style.marginRight = `${slideGap}px`;
+      }
+    });
+  
+    // Get the actual width (includes margin)
+    function getSlideWidth() {
+      const slide = slider.children[0];
+      const style = window.getComputedStyle(slide);
+      const width = slide.offsetWidth;
+      const marginRight = parseFloat(style.marginRight);
+      return width + marginRight;
+    }
+  
+    function moveToSlide(index) {
+      const sliderWidth = getSlideWidth();
+      slider.style.transition = 'transform 0.5s ease';
+      slider.style.transform = `translateX(-${index * sliderWidth}px)`;
+    }
+  
+    function keepCloning() {
+      const sliderWidth = getSlideWidth();
+      const maxVisibleSlides = Math.ceil(container.offsetWidth / sliderWidth);
+      const slides = Array.from(slider.children);
+  
+      if (currentSlide + maxVisibleSlides >= slides.length) {
+        originalSlides.forEach(slide => {
+          const clone = slide.cloneNode(true);
+          slider.appendChild(clone);
+        });
+      }
+    }
+  
     let autoSlide = setInterval(() => {
       currentSlide++;
-      if (currentSlide >= slider.children.length) {
-        currentSlide = 1; // Skip the cloned first image (which is now at the end)
-        slider.style.transition = 'none'; // Remove transition to jump seamlessly
-        slider.style.transform = `translateX(0)`;
-        setTimeout(() => {
-          slider.style.transition = 'transform 0.5s ease'; // Re-enable transition after jump
-        }, 50); // Small timeout to let the jump happen
-      } else {
-        slider.style.transform = `translateX(-${currentSlide * sliderWidth}px)`;
-      }
+      moveToSlide(currentSlide);
+      keepCloning();
     }, slideInterval);
   
-    // Pause on hover
     container.addEventListener('mouseenter', () => clearInterval(autoSlide));
+
     container.addEventListener('mouseleave', () => {
+
       autoSlide = setInterval(() => {
         currentSlide++;
-        if (currentSlide >= slider.children.length) {
-          currentSlide = 1;
-          slider.style.transition = 'none';
-          slider.style.transform = `translateX(0)`;
-          setTimeout(() => {
-            slider.style.transition = 'transform 0.5s ease';
-          }, 50);
-        } else {
-          slider.style.transform = `translateX(-${currentSlide * sliderWidth}px)`;
-        }
+        moveToSlide(currentSlide);
+        keepCloning();
       }, slideInterval);
+      
     });
+  }
   
-    // Drag to scroll
-    container.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      startX = e.pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-    });
+  sliderContainer();
   
-    container.addEventListener('mouseleave', () => {
-      isDragging = false;
-    });
-  
-    container.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-  
-    container.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - container.offsetLeft;
-      const walk = (x - startX) * 1.5; // scroll speed
-      container.scrollLeft = scrollLeft - walk;
-    });
-  
-    // Touch support
-    container.addEventListener('touchstart', (e) => {
-      isDragging = true;
-      startX = e.touches[0].pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-    });
-  
-    container.addEventListener('touchmove', (e) => {
-      if (!isDragging) return;
-      const x = e.touches[0].pageX - container.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      container.scrollLeft = scrollLeft - walk;
-    });
-  
-    container.addEventListener('touchend', () => {
-      isDragging = false;
-    });
-        
-
-}
-
-sliderContainer()
-
-
-
