@@ -1722,6 +1722,13 @@ iframe {
 
     }
 
+    .heading-feedback {
+
+        line-height: var(--lh-display-large);
+        font-weight: 800;
+        font-size: var(--fs-display-medium);
+    
+    }
 
 
 }
