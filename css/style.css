@@ -692,6 +692,7 @@ body {
 .card-data .card-title {
 
     line-height: var(--lh-title-large);
+    font-size: var(--fs-title-large);
 
 
 }
@@ -700,6 +701,8 @@ body {
 
     text-align: start;
     line-height: var(--lh-title-medium);
+    font-size: var(--fs-body-large);
+
 
 }
 
