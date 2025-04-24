@@ -1730,5 +1730,22 @@ iframe {
     
     }
 
+    .card-data .card-title {
+
+        line-height: var(--lh-title-large);
+        font-size: var(--fs-title-large);
+    
+    
+    }
+    
+    .card-data .card-description {
+    
+        text-align: start;
+        line-height: var(--lh-title-medium);
+        font-size: var(--fs-body-large);
+    
+    
+    }
+
 
 }
